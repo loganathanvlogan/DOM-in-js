@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - (Document Object Model)</title>
+</head>
+<body>
+  <!---
+    
+    1. What is DOM ?
+
+        It is a standard object and interface for an html element. So that the program can change the structure 
+    of the document, style, change the content.
+
+    2. Purpose of using DOM ?
+
+        The main purpose to change the content dynamically,
+        For data retrieval
+        Form handling
+        Client-side validation
+
+    3. document.getElementById - Find elements by Id name ( It returns an specified value)    
+    4. element.innerHTML - change the inner HTML of an element.
+    5. element.style.property - change the style of an element 
+    6. it is used to perform some action
+-->
+
+
+   <!----DOM 1st program -->
+
+   <p id="one">Welcome to my channel</p>
+   <p id="two"></p>
+
+
+   <!--Changing the content-->
+    
+   <p id="three">Welcome</p>
+
+   <!---Change the style of the element-->
+
+   <h1>Hello Everyone</h1>
+
+   <p id="color1">Salem</p>
+   <p id="color2">Chennai</p>
+
+   <!----Changing the image-->
+
+   <img id="imgc" src="images/download.jpg" alt="">
+
+   <!---Event Action-->
+   <h2>Sample</h2>
+   <button id="event">Click_Here</button>
+   <p id="td">Today's Date</p>
+
+
+
+   <script>
+
+    const element = document.getElementById("one");
+    document.getElementById("two").innerHTML = "This is Logan: " + element.innerHTML;
+
+    // Changing the content
+
+    document.getElementById("three").innerHTML = "Developer";
+
+   // Changing the style element
+
+   document.getElementById("color1").style.color = "red";
+   document.getElementById("color2").style.color = "pink";
+
+   // Changing the image
+
+   document.getElementById("imgc").src = "images/WhatsApp Image 2023-07-25 at 12.29.20 PM.jpeg";
+
+   // Event action
+
+   document.getElementById("event").onclick = display;
+
+   function display(){
+
+    document.getElementById("td").innerHTML=Date();
+   }
+   
+   </script>
+</body>
+</html>
